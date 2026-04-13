@@ -1,9 +1,6 @@
 
-
-
-
-@media (max-width: 768px){
-    body{
+body{
+    max-width: 1300px;
     background: linear-gradient(135deg, #1e3c72, #2a5298);    color: rgb(245, 245, 245);
     margin-top: 30px;
     margin-left: 30px;
@@ -34,7 +31,7 @@ input:focus{
 button{
     padding: 10px;
     border-radius: 16px;
-    width: 50px;
+    width: 100px;
     background: rgb(185, 11, 11);
     color: white;
     font-size: 16px;
@@ -48,13 +45,14 @@ button{
     gap: 20px;
 }
 .card-weather{
-    flex: 1 1 calc(50% - 20px);
-    max-width: calc(50% - 20px);
+    flex: 1 1 1 1calc(25% - 20px);
+    max-width: calc(25% - 20px);
     background-image: url(sun.svg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 400px;
+    width: 300px;
     /* padding-top: 30px; */
     color: black;
     text-transform: capitalize;
@@ -76,7 +74,7 @@ p.desc{
     bottom: 150px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     text-transform: capitalize;
 
@@ -86,7 +84,7 @@ p.desc{
     left: 40px;
     right: 40px;
     bottom: 20px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
 }
 .windhum .hum{
@@ -102,11 +100,98 @@ p.desc{
     position: absolute;
     z-index: 10;
     right: 20px;
-    top: 10px;
+    top: 20px;
     font-size: 20px;
     cursor:pointer;
 
 }
  
+
+
+
+@media (max-width: 768px){
+
+.card-weather{
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+    background-image: url(sun.svg);
+    height: 400px;
+    
 }
 
+p.temp{
+    font-size: 56px;
+    font-weight: 700;
+}
+p.desc{
+    font-size: 18px;
+    font-weight: 600;
+
+}
+.windhum{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.fa-xmark{
+    top: 10px;
+}
+ 
+} 
+
+@media (max-width: 393px){
+input{
+    max-width: 70%;
+}
+button{
+    width: 60px;
+}
+.card-weather{
+    flex: 1 calc(90%);
+    max-width: calc(90%);
+    height: 180px;
+    
+
+    }
+.card-weather .city-name{
+    padding-top: 0px;
+}
+p.temp{
+    font-size: 32px;
+}
+p.desc{
+    font-size: 12px;
+    bottom: 30px;
+
+}
+.windhum{
+    display: flex;
+    justify-content: space-between;
+    left: -20px;
+    right: -20px;
+    margin-bottom: 35px;
+}
+.windhum .hum,
+.windhum .wind{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+
+}
+.windhum i{
+    font-size: 12px;
+    margin: 0;
+}
+.windhum p{
+    font-family: 12px;
+    margin: 0;
+}
+
+.fa-xmark{
+    right: 8px;
+    top: 8px;
+    font-size: 16px;
+
+}
+}
