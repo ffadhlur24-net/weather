@@ -14,7 +14,7 @@ function getWeather() {
     fetch(url)
         .then(respone => respone.json())
         .then(data => {
-            if (data.cod === 404){
+            if (data.cod === "404"){
                 alert('Kota tidak ada');
                 return;
             }
